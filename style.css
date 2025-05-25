@@ -1,0 +1,87 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #111;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.panel {
+  border: 2px solid #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.display {
+  font-size: 4rem;
+  margin: 20px;
+  border: 2px solid #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  min-width: 100px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.digits {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend {
+  text-align: left;
+  margin-top: 20px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.2rem;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.actions button {
+  margin: 10px;
+  width: 100px;
+}
+
+.language-switcher {
+  margin: 20px;
+}
+
+.language-switcher button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1rem;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.language-switcher button:hover {
+  background: #666;
+}

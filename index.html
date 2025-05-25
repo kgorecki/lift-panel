@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lift panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="screen1" class="screen">
+    <div class="panel">
+      <div class="display" id="floorDisplay">_</div>
+      <div class="buttons">
+        <div class="digits">
+          <button onclick="pressDigit(1)">1</button>
+          <button onclick="pressDigit(2)">2</button>
+          <button onclick="pressDigit(3)">3</button>
+          <button onclick="pressDigit(4)">4</button>
+          <button onclick="pressDigit(5)">5</button>
+          <button onclick="pressDigit(6)">6</button>
+          <button onclick="pressDigit(7)">7</button>
+          <button onclick="pressDigit(8)">8</button>
+          <button onclick="pressDigit(9)">9</button>
+          <button onclick="pressDigit(0)">0</button>
+        </div>
+        <div class="actions">
+          <button onclick="callElevator()">Call</button>
+          <button onclick="clearInput()">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="legend">
+      <p>Press "Call" to confirm your floor selection.</p>
+      <p>Use the "Clear" button to reset the input.</p>
+      <p>Audio files are available for floors 1-13. 13th floor contains wrong audio.</p>
+    </div>
+    <div class="language-switcher">
+      <button onclick="switchLanguage('en')">English</button>
+      <button onclick="switchLanguage('fi')">Finnish</button>
+      <button onclick="switchLanguage('pl')">Polish</button>
+    </div>
+  </div>
+
+  <div id="screen2" class="screen hidden">
+    <p id="arrivedText">Floor</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
