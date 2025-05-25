@@ -85,3 +85,24 @@ button {
 .language-switcher button:hover {
   background: #666;
 }
+
+.language-button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1rem;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.language-button:hover {
+  background: #666;
+}
+
+.language-button.active-language {
+  background: #008cba;
+  color: white;
+  font-weight: bold;
+}

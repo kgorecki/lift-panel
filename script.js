@@ -65,6 +65,8 @@ function callElevator() {
 
 function switchLanguage(lang) {
   currentLanguage = lang;
+
+  generateLanguageSwitcher();
   
   const legendTexts = document.querySelectorAll('.legend p');
   const arrivedText = document.getElementById('arrivedText');
@@ -95,6 +97,9 @@ function generateLanguageSwitcher() {
     button.textContent = lang.toUpperCase();
     button.onclick = () => switchLanguage(lang);
     button.classList.add('language-button');
+    if (lang === currentLanguage) {
+      button.classList.add('active-language'); // Highlight the current language
+    }
     languageSwitcher.appendChild(button);
   });
 }
