@@ -85,3 +85,19 @@ function switchLanguage(lang) {
     audioElement.src = translations[lang].audioFiles[1]; // Update based on the selected floor
   }
 }
+
+function generateLanguageSwitcher() {
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  languageSwitcher.innerHTML = '';
+
+  Object.keys(translations).forEach((lang) => {
+    const button = document.createElement('button');
+    button.textContent = lang.toUpperCase();
+    button.onclick = () => switchLanguage(lang);
+    button.classList.add('language-button');
+    languageSwitcher.appendChild(button);
+  });
+}
+
+// Call the function to generate the language switcher on page load
+document.addEventListener('DOMContentLoaded', generateLanguageSwitcher);
